@@ -1,0 +1,73 @@
+.class public final Lh6/f;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# direct methods
+.method public static a()I
+    .locals 3
+
+    invoke-static {}, La1/a;->h()Lg1/p;
+
+    move-result-object v0
+
+    const-string v1, "pref_camera_global_guide_shown_key"
+
+    const/4 v2, -0x1
+
+    invoke-virtual {v0, v1, v2}, Ldh/a;->i(Ljava/lang/String;I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static b()Z
+    .locals 3
+
+    invoke-static {}, La1/a;->h()Lg1/p;
+
+    move-result-object v0
+
+    const-string v1, "pref_camera_global_guide_shown_key"
+
+    const/4 v2, -0x1
+
+    invoke-virtual {v0, v1, v2}, Ldh/a;->i(Ljava/lang/String;I)I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public static c()V
+    .locals 3
+
+    invoke-static {}, La1/a;->h()Lg1/p;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ldh/a;->f()Ldh/a;
+
+    const/4 v1, 0x0
+
+    const-string v2, "pref_camera_global_guide_shown_key"
+
+    invoke-virtual {v0, v1, v2}, Ldh/a;->o(ILjava/lang/String;)Ldh/a;
+
+    invoke-virtual {v0}, Ldh/a;->b()V
+
+    return-void
+.end method

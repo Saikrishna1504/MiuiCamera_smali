@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ie3" parent="@style/ie1" />
+    <style name="ie_" parent="@style/ie8" />
+    <style name="ieo" parent="@style/iem" />
+    <style name="iey" parent="@style/iew" />
+    <style name="iyn" parent="@style/iec">
+        <item name="axi">@dimen/azf</item>
+        <item name="axj">@dimen/azg</item>
+        <item name="axk">@dimen/azh</item>
+        <item name="axl">@dimen/azi</item>
+    </style>
+    <style name="iz4" parent="@style/ief">
+        <item name="axi">@dimen/azf</item>
+        <item name="axj">@dimen/azg</item>
+        <item name="axk">@dimen/azh</item>
+        <item name="axl">@dimen/azi</item>
+    </style>
+</resources>

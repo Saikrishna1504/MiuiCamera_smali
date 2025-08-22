@@ -1,0 +1,169 @@
+.class public final synthetic Le7/r1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic d:Ljava/lang/Object;
+
+.field public final synthetic e:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    iput p1, p0, Le7/r1;->a:I
+
+    iput-object p2, p0, Le7/r1;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Le7/r1;->c:Ljava/lang/Object;
+
+    iput-object p4, p0, Le7/r1;->d:Ljava/lang/Object;
+
+    iput-object p5, p0, Le7/r1;->e:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 6
+
+    iget v0, p0, Le7/r1;->a:I
+
+    iget-object v1, p0, Le7/r1;->e:Ljava/lang/Object;
+
+    iget-object v2, p0, Le7/r1;->d:Ljava/lang/Object;
+
+    iget-object v3, p0, Le7/r1;->c:Ljava/lang/Object;
+
+    iget-object p0, p0, Le7/r1;->b:Ljava/lang/Object;
+
+    packed-switch v0, :pswitch_data_0
+
+    goto :goto_1
+
+    :pswitch_0
+    check-cast p0, Le7/s1;
+
+    check-cast v3, Landroid/content/Context;
+
+    check-cast v2, Ljava/lang/String;
+
+    check-cast v1, Ljava/lang/Runnable;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lbh/a;->e()Z
+
+    move-result v0
+
+    const-string v4, "FML"
+
+    const/4 v5, 0x0
+
+    if-nez v0, :cond_0
+
+    const-string p0, "check networkError"
+
+    new-array v0, v5, [Ljava/lang/Object;
+
+    invoke-static {v4, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    const p0, 0x7f140574
+
+    invoke-static {v3, p0, v5}, La0/l7;->b(Landroid/content/Context;IZ)V
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "attr_feature_install_cellular_confirm"
+
+    invoke-static {v0}, Ln8/a;->J(Ljava/lang/String;)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v3, "check confirm:"
+
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, "_"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Le7/s1;->h:Ljava/util/concurrent/ConcurrentHashMap;
+
+    if-nez v3, :cond_1
+
+    new-instance v3, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v3}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object v3, p0, Le7/s1;->h:Ljava/util/concurrent/ConcurrentHashMap;
+
+    :cond_1
+    iget-object v3, p0, Le7/s1;->h:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-array v3, v5, [Ljava/lang/Object;
+
+    invoke-static {v4, v0, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-virtual {p0, v2}, Le7/s1;->C(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
+
+    :cond_2
+    :goto_0
+    return-void
+
+    :goto_1
+    check-cast p0, Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;
+
+    check-cast v3, Lcom/google/android/exoplayer2/source/MediaSourceEventListener;
+
+    check-cast v2, Lcom/google/android/exoplayer2/source/LoadEventInfo;
+
+    check-cast v1, Lcom/google/android/exoplayer2/source/MediaLoadData;
+
+    invoke-static {p0, v3, v2, v1}, Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;->e(Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;Lcom/google/android/exoplayer2/source/MediaSourceEventListener;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="j9h" parent="@style/j49">
+        <item name="android:textAppearance">@style/imf</item>
+        <item name="android:textColor">?wf</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@string/gve</item>
+        <item name="android:breakStrategy">balanced</item>
+    </style>
+</resources>
